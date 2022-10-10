@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  mysql_database:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: representative_db
+      MYSQL_USER: hbrepresentacao
+      MYSQL_PASSWORD: hbrepresentacao
+      MYSQL_ROOT_PASSWORD: "admin"
+    container_name: representative_db
+    ports: 
+      - 3306:3306
