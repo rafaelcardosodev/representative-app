@@ -28,8 +28,12 @@ public class Contato {
     private String celular;
 
     @ManyToOne()
-    @JoinColumn(name = "cliente_id", nullable = false)
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+
+    @ManyToOne()
+    @JoinColumn(name = "empresa_representada_id")
+    private Contato contato;
 
     public Contato() {}
 

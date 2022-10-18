@@ -16,13 +16,13 @@ public class Cliente {
     @Column(name = "nome")
     private String nome;
 
-    @Column(name = "razaoSocial")
+    @Column(name = "razao_social")
     private String razaoSocial;
 
     @Column(name = "cnpj")
     private String cnpj;
 
-    @Column(name = "inscricaoEstadual")
+    @Column(name = "inscricao_estadual")
     private String inscricaoEstadual;
 
     @Column(name = "observacao")

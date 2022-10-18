@@ -25,6 +25,12 @@ public class EmpresaRepresentada {
     @OneToMany(mappedBy = "empresaRepresentada")
     private List<Endereco> enderecos;
 
+    @ManyToMany(mappedBy = "empresasRepresentadas")
+    private List<Cliente> clientes;
+
+    @OneToMany(mappedBy = "empresaRepresentada")
+    private List<Contato> contatos;
+
     public EmpresaRepresentada() {}
 
     public EmpresaRepresentada(Long id, String nome, String cnpj, String razaoSocial, List<Endereco> enderecos) {

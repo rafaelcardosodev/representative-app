@@ -24,10 +24,10 @@ public class Endereco {
     @Column(name = "cidade")
     private String cidade;
 
-    @Column(name = "estado")
-    private String estado;
+    @Column(name = "uf")
+    private String uf;
 
-    @Column(name = "isEnderecoPrincipal")
+    @Column(name = "is_endereco_principal")
     private Boolean isEnderecoPrincipal;
 
     @ManyToOne()
@@ -40,13 +40,13 @@ public class Endereco {
 
     public Endereco(){}
 
-    public Endereco(Long id, String logradouro, String bairro, String cep, String cidade, String estado, Boolean isEnderecoPrincipal, Cliente cliente, EmpresaRepresentada empresaRepresentada) {
+    public Endereco(Long id, String logradouro, String bairro, String cep, String cidade, String uf, Boolean isEnderecoPrincipal, Cliente cliente, EmpresaRepresentada empresaRepresentada) {
         this.id = id;
         this.logradouro = logradouro;
         this.bairro = bairro;
         this.cep = cep;
         this.cidade = cidade;
-        this.estado = estado;
+        this.uf = uf;
         this.isEnderecoPrincipal = isEnderecoPrincipal;
         this.cliente = cliente;
         this.empresaRepresentada = empresaRepresentada;
@@ -92,12 +92,12 @@ public class Endereco {
         this.cidade = cidade;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getUf() {
+        return uf;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setUf(String uf) {
+        this.uf = uf;
     }
 
     public Boolean getEnderecoPrincipal() {
